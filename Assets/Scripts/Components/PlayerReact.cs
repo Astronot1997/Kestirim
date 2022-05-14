@@ -45,7 +45,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
         for (int i=0; i<Reaction.Length;i++)
         {
 
-            Debug.Log(Reaction[i].Distance);
+            Debug.Log(Reaction[i].Distance);    
 
             if (Reaction[i].Light.Inverse)
             {
