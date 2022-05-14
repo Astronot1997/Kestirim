@@ -1,0 +1,10 @@
+To begin with this project you have to import:
+
+Standard assets > Cameras 
+and
+Standard assets > Characters
+
+
+To get started I recommend reading the documentation files
+
+You are free to use all the models and scripts from this package in your other projects and release this project for commercial use

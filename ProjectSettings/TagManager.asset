@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DrinkAble
+  - Eatable
+  - OilBarrel
+  - LampControl
+  - Mineable
+  - Planter
+  - Generator
+  - SpotLight
+  - AI
   layers:
   - Default
   - TransparentFX
@@ -13,11 +22,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Lamps
+  - Support
+  - Holding
+  - Debug
+  - Generator
   - 
   - 
   - 
