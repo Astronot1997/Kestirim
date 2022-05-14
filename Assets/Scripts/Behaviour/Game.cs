@@ -31,6 +31,8 @@ public class Game : MonoBehaviour
 
                 float Magnitude = DistanceNoZ.magnitude;
 
+                Debug.Log(Magnitude);
+
                 if (Distance.magnitude <= (GameLights[j].Range + ReactingObjects[i].Range))
                 {
                     Reactions.Add(new LightReaction(ReactingObjects[i], GameLights[j],  Magnitude, Distance.normalized));
@@ -41,7 +43,7 @@ public class Game : MonoBehaviour
             if (Reactions.Count > 0)
             {
 
-
+                
                 LightReaction[] ReactionArray = Reactions.ToArray();
                 ReactingObjects[i].React(ReactionArray);
             }

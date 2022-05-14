@@ -45,23 +45,21 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
         for (int i=0; i<Reaction.Length;i++)
         {
 
-            Debug.Log(Reaction[i].Distance);    
+                
 
             if (Reaction[i].Light.Inverse)
             {
-                Direction -= Reaction[i].Direction * Mathf.Sqrt(Reaction[i].Distance) * Reaction[i].Light.Strength;
+                Direction -= Reaction[i].Direction/Mathf.Pow(Reaction[i].Distance,2) * Reaction[i].Light.Strength;
             }
             else
             {
-                Direction += Reaction[i].Direction * Mathf.Sqrt(Reaction[i].Distance) * Reaction[i].Light.Strength;
+                Direction += Reaction[i].Direction/Mathf.Pow(Reaction[i].Distance,2) * Reaction[i].Light.Strength;
             }           
 
         }
 
-        Direction.Normalize();
-       // Direction = Vector3.Cross(Vector3.up, Direction);
-
-        transform.Translate(Direction / 100);
+        var RB = GetComponent<Rigidbody>();
+        RB.AddForce(Direction);
 
     }
 
