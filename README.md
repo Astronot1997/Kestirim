@@ -1,0 +1,2 @@
+# Kestirim
+Oyun yapıyoz
