@@ -8,13 +8,16 @@ public enum GameLightType { All, None, White, Red, Blue, Green }
 public class GameLight : MonoBehaviour
 {
 
-    UnityEvent LightChangeEvent;
+    public UnityEvent LightChangeEvent;
 
+    [SerializeField]
     private GameLightType m_Type = GameLightType.None;
-
-    [Range(0f, 20f)]
+    [SerializeField] [Range(0f, 20f)]
     private float m_Range = 1f;
-
+    [SerializeField] [Range(0f, 20f)]
+    private float m_Strength = 1f;
+    [SerializeField]
+    private bool m_Inverse = false;
 
     public GameLightType Type
     {
@@ -28,7 +31,6 @@ public class GameLight : MonoBehaviour
             OnLightChange();
         }
     }
-
     public float Range
     {
         get
@@ -41,7 +43,28 @@ public class GameLight : MonoBehaviour
             OnLightChange();
         }
     }
-
+    public float Strength
+    {
+        get
+        {
+            return m_Strength;
+        }
+        set
+        {
+            m_Strength = value;
+        }
+    }
+    public bool Inverse
+    {
+        get
+        {
+            return m_Inverse;
+        }
+        set
+        {
+            m_Inverse = value;
+        }
+    }
 
     private void Update()
     {
@@ -52,7 +75,6 @@ public class GameLight : MonoBehaviour
         }
                
     }
-
     private void Awake()
     {
         if (LightChangeEvent == null)
@@ -72,7 +94,6 @@ public class GameLight : MonoBehaviour
         Game GameInstance = FindObjectOfType<Game>();
 
     }
-
     private void OnValidate()
     {
         OnLightChange();

@@ -45,7 +45,16 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
         for (int i=0; i<Reaction.Length;i++)
         {
 
-            Direction += Reaction[i].Direction * Mathf.Sqrt(Reaction[i].Distance);
+            Debug.Log(Reaction[i].Distance);
+
+            if (Reaction[i].Light.Inverse)
+            {
+                Direction -= Reaction[i].Direction * Mathf.Sqrt(Reaction[i].Distance) * Reaction[i].Light.Strength;
+            }
+            else
+            {
+                Direction += Reaction[i].Direction * Mathf.Sqrt(Reaction[i].Distance) * Reaction[i].Light.Strength;
+            }           
 
         }
 

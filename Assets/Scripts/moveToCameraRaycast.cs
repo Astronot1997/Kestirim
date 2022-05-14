@@ -16,8 +16,8 @@ public class moveToCameraRaycast : MonoBehaviour
         if (Physics.Raycast(ray, out hit,1000,layerMask))
         {
             cursor.position= hit.point+Vector3.up*height;
-            Debug.Log(hit.point);
-            Debug.DrawLine(camera.transform.position, hit.point);
+            //Debug.Log(hit.point);
+            //Debug.DrawLine(camera.transform.position, hit.point);
             // Do something with the object that was hit by the raycast.
         }
     }

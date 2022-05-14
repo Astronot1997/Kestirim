@@ -27,9 +27,11 @@ public class Game : MonoBehaviour
                 Vector3 DistanceNoZ = Distance;
                 DistanceNoZ.z = 0;
 
+
+
                 float Magnitude = DistanceNoZ.magnitude;
 
-                if (Distance.magnitude > (GameLights[j].Range + ReactingObjects[i].Range)/2)
+                if (Distance.magnitude <= (GameLights[j].Range + ReactingObjects[i].Range))
                 {
                     Reactions.Add(new LightReaction(ReactingObjects[i], GameLights[j],  Magnitude, Distance.normalized));
                 }
