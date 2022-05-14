@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ILightReact : MonoBehaviour
+public class ReactToLight : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
