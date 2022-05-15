@@ -480,7 +480,6 @@ GameObject:
   - component: {fileID: 6883305740587421197}
   - component: {fileID: 7972444717646211737}
   - component: {fileID: 8597729332040628040}
-  - component: {fileID: 8597729332040628041}
   - component: {fileID: 8597729332040628042}
   m_Layer: 3
   m_Name: Sahne
@@ -715,19 +714,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: c4b6f3980b6640e4d8b8c1c8d8584b23, type: 3}
---- !u!114 &8597729332040628041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713655855565956220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da419f3a56e24a4ea2024a6fcf885d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLights: []
 --- !u!114 &8597729332040628042
 MonoBehaviour:
   m_ObjectHideFlags: 0
