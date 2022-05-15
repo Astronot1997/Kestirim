@@ -128,9 +128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oyuncu: {fileID: 0}
-  rigidbody: {fileID: 0}
+  m_rigidbody: {fileID: 0}
   IsAfraid: 0
   Delay: 0
   ForceRange: {x: 250, y: 700}
   DelayRange: {x: 1.4, y: 4}
   NoiseRange: {x: -0.4, y: 0.4}
+  SpawnOnJump: {fileID: 2489586569180138272, guid: ffa76940701c62f4d996e3472a53b62b,
+    type: 3}
+  SpawnOnScared: {fileID: 2489586569180138272, guid: a2493b12e99c79a4e87603d8cf6964c2,
+    type: 3}
+  spawnCount: 0

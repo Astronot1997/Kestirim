@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &837245775
+--- !u!1001 &940018547
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -134,22 +134,22 @@ PrefabInstance:
     - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.76
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
@@ -189,37 +189,7 @@ PrefabInstance:
     - target: {fileID: 1548036780961472568, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
         type: 3}
       propertyPath: m_Name
-      value: "Karanl\u0131k Adam (2)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472568, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: DelayRange.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: DelayRange.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: ForceRange.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: NoiseRange.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: NoiseRange.y
-      value: 0.5
+      value: "Karanl\u0131k Adam"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -351,102 +321,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 7843659518603511028}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1869530951
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -25.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472548, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472568, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_Name
-      value: "Karanl\u0131k Adam (1)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1548036780961472568, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: DelayRange.x
-      value: 3.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: DelayRange.y
-      value: 7.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: ForceRange.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 8654262517940947546, guid: 41364e0da04a2b84da4a5fd16fe7eb29,
-        type: 3}
-      propertyPath: ForceRange.y
-      value: 2100
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 41364e0da04a2b84da4a5fd16fe7eb29, type: 3}
 --- !u!1001 &159752450193749040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,77 +488,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &996674964367163282
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356130, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996674962998356158, guid: 167b60e78d88b334ea6b3cf64fb8ba9a,
-        type: 3}
-      propertyPath: m_Name
-      value: "Karanl\u0131k Adam"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 167b60e78d88b334ea6b3cf64fb8ba9a, type: 3}
 --- !u!33 &6883305740587421197
 MeshFilter:
   m_ObjectHideFlags: 0

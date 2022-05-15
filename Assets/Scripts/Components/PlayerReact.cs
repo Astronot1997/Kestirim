@@ -9,6 +9,8 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
     public GameObject OnSleepSpawn;
     public GameObject OnAngrySpawn;
 
+    public GameObject OnOuchSpawn;
+    public GameObject OnKillSpawn;
 
     public float spawnCounter = 0f;
 
@@ -38,7 +40,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
                 switch (State)
                 {
                     case 0:
-                        Debug.Log("0");
+                        //Debug.Log("0");
                         //GetComponent<MeshRenderer>().material.SetFloat("_Smoothness", 0.25f);
                         //GetComponent<MeshRenderer>().material.SetFloat("_Metallic", 0.25f);
                         GetComponent<Rigidbody>().velocity *= 0.20f;
@@ -47,14 +49,14 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
                         //GetComponent<MeshRenderer>().material.
                         break;
                     case 1:
-                        Debug.Log("1");
+                        //Debug.Log("1");
                         //GetComponent<MeshRenderer>().material.SetFloat("_Smoothness", 0.5f);
                         //GetComponent<MeshRenderer>().material.SetFloat("_Metallic", 0.5f);
                         GetComponent<Rigidbody>().drag = 2f;
                         //GetComponent<MeshRenderer>().material.SetColor("_BaseColor", UnityEngine.Color.blue);
                         break;
                     case 2:
-                        Debug.Log("2");
+                        //Debug.Log("2");
                         //GetComponent<MeshRenderer>().material.SetFloat("_Smoothness", 1f);
                         //GetComponent<MeshRenderer>().material.SetFloat("_Metallic", 1f);
                         //GetComponent<MeshRenderer>().material.SetColor("_BaseColor", UnityEngine.Color.green);
@@ -67,6 +69,40 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
         }
 
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        KaranlikAdam hedef;
+        if (TryGetComponent<KaranlikAdam>(out hedef))
+        {
+            if (Awake == 1)
+            {
+                var dir = transform.position - hedef.transform.position;
+
+                hedef.GetComponent<Rigidbody>().AddForce(dir.normalized * -1000f);
+
+                if (OnOuchSpawn)
+                {
+                    var letter = Instantiate(OnOuchSpawn);
+                    letter.transform.position = transform.position;
+                }
+            }
+            else
+            {
+                var dir = transform.position - hedef.transform.position;
+
+                GetComponent<Rigidbody>().AddForce(dir.normalized * 1000f);
+
+                if (OnKillSpawn)
+                {
+                    var letter = Instantiate(OnKillSpawn);
+                    letter.transform.position = transform.position;
+                }
+
+            }
+        }
+    }
+
 
     [SerializeField]
     private int m_State = 0;
@@ -202,9 +238,25 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
 
             if (spawnCounter < 0)
             {
-                var Letter = Instantiate(OnAngrySpawn);
-                Letter.transform.position = transform.position;
-                spawnCounter = 1f;
+
+                var letter = Instantiate(OnAngrySpawn);
+                letter.transform.position = transform.position;
+                spawnCounter = 0.6f;
+
+                var comp = letter.GetComponent<DyingLetter>();
+
+                if (comp.sound_src)
+                {
+                    spawnCounter = comp.sound_src.length;
+                }
+                else
+                {
+                    spawnCounter = 1f;
+                }
+
+
+
+                
             }
 
         }
@@ -219,9 +271,20 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
 
             if(spawnCounter < 0)
             {
-                var Letter = Instantiate(OnSleepSpawn);
-                Letter.transform.position = transform.position;
-                spawnCounter = 1f;
+                var letter = Instantiate(OnSleepSpawn);
+                letter.transform.position = transform.position;
+                spawnCounter = 0.6f;
+
+                var comp = letter.GetComponent<DyingLetter>();
+
+                if (comp.sound_src)
+                {
+                    spawnCounter = comp.sound_src.length;
+                }
+                else
+                {
+                    spawnCounter = 1f;
+                }
             }
             
 

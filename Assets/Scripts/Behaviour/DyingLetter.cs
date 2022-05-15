@@ -3,31 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TMPro.TextMeshPro))]
+[RequireComponent(typeof(AudioSource))]
 public class DyingLetter : MonoBehaviour
 {
 
-    public string letter;
-    public Color color;
     public Vector2 LifeRange;
     public float Speed;
+    public AudioClip sound_src;
 
     private float Life;
     Camera m_camera;
-    TMPro.TextMeshPro Text;
+    AudioSource src;
 
     private void Awake()
     {
-        Text = GetComponent<TMPro.TextMeshPro>();
-
+        m_camera = Camera.main;
+        src = GetComponent<AudioSource>();
     }
-
 
     void Start()
     {
         Life = Random.Range(LifeRange.x, LifeRange.y);
-        m_camera = Camera.main;
-        Text.text = letter;
-        Text.color = color;
+        transform.Translate(0, 3, 0, Space.World);
+
+        if (sound_src)
+        {
+            src.clip = sound_src;
+            src.Play();
+            Life = src.clip.length;
+        }
+        
     }
 
     private void Update()
@@ -36,7 +41,7 @@ public class DyingLetter : MonoBehaviour
 
         if (Life <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);    
         }
 
         var pos = transform.position;
