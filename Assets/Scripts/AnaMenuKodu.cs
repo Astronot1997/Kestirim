@@ -12,12 +12,20 @@ public class AnaMenuKodu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void LoadScene()
+    public void Load1()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadTutor()
+    public void Load2()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void Load3()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+    public void Load4()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 }

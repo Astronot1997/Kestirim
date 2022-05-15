@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ilk_sahne.unity
     guid: 3103642c42df677438d6cdf1d6a80336
+  - enabled: 1
+    path: Assets/Scenes/Labirent1.unity
+    guid: 343eb6c170bf74c49a817959c2e163f0
+  - enabled: 1
+    path: Assets/Scenes/Labirent2.unity
+    guid: 53653d76dfeb0f848add3d67f2d55f38
+  - enabled: 1
+    path: Assets/Scenes/Labirent3.unity
+    guid: 79789d6d9a71d544bb5d3ea12e35252c
   m_configObjects: {}
