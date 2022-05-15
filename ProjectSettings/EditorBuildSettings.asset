@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Labirent3.unity
     guid: 79789d6d9a71d544bb5d3ea12e35252c
+  - enabled: 1
+    path: Assets/Scenes/Labirent4.unity
+    guid: cc70c990d6f3e5944bdd411202e68dd3
   m_configObjects: {}

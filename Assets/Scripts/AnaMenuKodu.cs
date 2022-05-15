@@ -28,4 +28,8 @@ public class AnaMenuKodu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
+    public void Load5()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+    }
 }
