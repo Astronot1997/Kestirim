@@ -24,16 +24,19 @@ public class Game : MonoBehaviour
             {
 
                 Vector3 Distance = GameLights[j].transform.position - ReactingObjects[i].Position;
+
+               // Debug.Log(Distance);
+
                 Vector3 DistanceNoZ = Distance;
-                DistanceNoZ.z = 0;
+                DistanceNoZ.y = 0;
 
 
 
                 float Magnitude = DistanceNoZ.magnitude;
 
-                Debug.Log(Magnitude);
+                //Debug.Log(Magnitude);
 
-                if (Distance.magnitude <= (GameLights[j].Range + ReactingObjects[i].Range))
+                if (Distance.magnitude <= ReactingObjects[i].Range)
                 {
                     Reactions.Add(new LightReaction(ReactingObjects[i], GameLights[j],  Magnitude, Distance.normalized));
                 }
@@ -42,11 +45,13 @@ public class Game : MonoBehaviour
 
             if (Reactions.Count > 0)
             {
-
-                
                 LightReaction[] ReactionArray = Reactions.ToArray();
                 ReactingObjects[i].React(ReactionArray);
             }
+            else
+            {
+                ((PlayerReact)ReactingObjects[i]).State = 0;
+            }   
 
         }
 

@@ -545,7 +545,7 @@ MonoBehaviour:
       m_Calls: []
   m_Type: 1
   m_Range: 1
-  m_Strength: 1
+  m_Strength: 0.2
   m_Inverse: 0
 --- !u!114 &518427649
 MonoBehaviour:
@@ -675,7 +675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730172137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9106415, y: 0.11576384, z: 0.12402645}
+  m_LocalPosition: {x: 1.1484, y: 0.11576384, z: 0.12402645}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: 1
-  m_Range: 5.7
+  m_Range: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

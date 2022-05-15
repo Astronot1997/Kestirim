@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CaveCamera : MonoBehaviour
 {
-    public GameObject Environment;
+
     public GameObject Target;
+
+    public float d;
+    public float h;
 
     void Update()
     {
@@ -14,11 +17,14 @@ public class CaveCamera : MonoBehaviour
         float verval = Input.GetAxis("Vertical");
         float pageval = Input.GetAxis("Mouse ScrollWheel");
 
-        transform.position += new Vector3(horval/10f, -pageval*3f, verval / 10f);
+        d += verval/4;
+        h -= pageval*10;
 
         if (Target)
         {
-            transform.position = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
+            transform.position = new Vector3(Target.transform.position.x+d, Target.transform.position.y+h, Target.transform.position.z + d);
+            transform.LookAt(Target.transform);
+
         }
 
         
