@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeRange: {x: 1, y: 1.5}
   Speed: 0.8
-  sound_src: {fileID: 8300000, guid: dfef106822890d4409bddd9d2fd00093, type: 3}
+  sound_src: {fileID: 8300000, guid: c6022ca98dd9f2140ad5fbc443a5d564, type: 3}
 --- !u!82 &2418652493907797489
 AudioSource:
   m_ObjectHideFlags: 0

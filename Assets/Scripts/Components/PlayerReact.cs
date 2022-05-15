@@ -20,7 +20,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
 
     public GameLightType m_Color = GameLightType.None;
 
-    [Range(0f,20f)]
+   
     public float m_Range = 5;
 
     public float Awake = 0f;
@@ -61,7 +61,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
                         //GetComponent<MeshRenderer>().material.SetFloat("_Metallic", 1f);
                         //GetComponent<MeshRenderer>().material.SetColor("_BaseColor", UnityEngine.Color.green);
                         GetComponent<Rigidbody>().velocity *= 2f;
-                        //GetComponent<Rigidbody>().drag = 0.5f;
+                        GetComponent<Rigidbody>().drag = 0.5f;
                         break;
 
                 }
@@ -73,7 +73,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
     public void OnCollisionEnter(Collision collision)
     {
         KaranlikAdam hedef;
-        if (TryGetComponent<KaranlikAdam>(out hedef))
+        if (collision.collider.TryGetComponent<KaranlikAdam>(out hedef))
         {
             if (Awake == 1)
             {
@@ -86,12 +86,14 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
                     var letter = Instantiate(OnOuchSpawn);
                     letter.transform.position = transform.position;
                 }
+
+                Destroy(hedef.gameObject);
             }
             else
             {
                 var dir = transform.position - hedef.transform.position;
 
-                GetComponent<Rigidbody>().AddForce(dir.normalized * 1000f);
+                GetComponent<Rigidbody>().AddForce(dir.normalized * 10000f);
 
                 if (OnKillSpawn)
                 {
@@ -247,7 +249,7 @@ public class PlayerReact : MonoBehaviour, IReactsToLight
 
                 if (comp.sound_src)
                 {
-                    spawnCounter = comp.sound_src.length;
+                    spawnCounter = comp.sound_src.length+4f;
                 }
                 else
                 {

@@ -30,7 +30,7 @@ public class KaranlikAdam : MonoBehaviour
     void Awake()
     {
         oyuncu = FindObjectOfType<PlayerReact>();
-        m_rigidbody = FindObjectOfType<Rigidbody>();
+        m_rigidbody = GetComponent<Rigidbody>();
         isik = FindObjectOfType<GameLight>();
     }
 
@@ -42,7 +42,7 @@ public class KaranlikAdam : MonoBehaviour
 
         dpos.y = 0f;
 
-        Debug.Log(oyuncu.transform.position);
+        //Debug.Log(oyuncu.transform.position);
 
         if (dpos.magnitude<5 & isik.Strength > 6f)
         {
@@ -65,25 +65,26 @@ public class KaranlikAdam : MonoBehaviour
 
         if (!IsAfraid)
         {
-            if (spawnCount < 0)
-            {
-                var letter = Instantiate(SpawnOnJump);
-                letter.transform.position = transform.position;
-
-                var comp = letter.GetComponent<DyingLetter>();
-
-                if (comp.sound_src)
-                {
-                    spawnCount = comp.sound_src.length;
-                }
-                else
-                {
-                    spawnCount = 1f;
-                }
-
-            }
+            
             if(Delay < 0)
             {
+                if (spawnCount < 0)
+                {
+                    var letter = Instantiate(SpawnOnJump);
+                    letter.transform.position = transform.position;
+
+                    var comp = letter.GetComponent<DyingLetter>();
+
+                    if (comp.sound_src)
+                    {
+                        spawnCount = comp.sound_src.length + 12;
+                    }
+                    else
+                    {
+                        spawnCount = 1f;
+                    }
+
+                }
                 m_rigidbody.drag = 1;
                 var Dir = (oyuncu.transform.position - transform.position);
 

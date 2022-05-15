@@ -92,7 +92,7 @@ public class GameLight : MonoBehaviour
         }
         else
         {
-            if (OnCooldown)
+            if (OnCooldown) 
             {
                 CooldownCounter += Time.deltaTime;
             }
